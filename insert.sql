@@ -30,3 +30,6 @@ INSERT INTO TERMINAL values ('5','Antonio Carlos Jobim');
 
 
 INSERT INTO VOL values (0442,TO_DATE('2023-07-10 23:30:00', 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2023-07-11 05:30:00', 'YYYY-MM-DD HH24:MI:SS'),1,'Charles de Gaulle','Antonio Carlos Jobim','2C','1');
+INSERT INTO VOL values (0443,TO_DATE('2023-07-11 10:30:00', 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2023-07-12 01:30:00', 'YYYY-MM-DD HH24:MI:SS'),1,'Antonio Carlos Jobim','Francisci sa carneiro','1','1F');
+
+
