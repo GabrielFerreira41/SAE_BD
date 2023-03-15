@@ -37,17 +37,19 @@
 --     (d) Veuillez fournir la liste des villes accessibles depuis Paris, en tenant compte des
 -- horaires de vol, avec des vols directs ou un nombre quelconque de correspondances
 
-WITH correspondances(villeA) AS (
-  SELECT DISTINCT d.villeA
+COLUMN ville FORMAT A20
+
+WITH VillesAtteignables(ville) AS (
+    SELECT DISTINCT villeA
+    FROM VOL v
+    JOIN AEROPORT a ON v.AeroportARR = a.nomA
+    WHERE a.villeA = 'Paris'
+    UNION ALL
+    SELECT DISTINCT a.villeA
     FROM VOL v
     JOIN AEROPORT a ON v.AeroportDEP = a.nomA
-    JOIN AEROPORT b ON v.AeroportARR = b.nomA
-    JOIN VOL v2 ON v2.AeroportDEP = b.nomA
-    JOIN AEROPORT d ON v2.AeroportARR = d.nomA
+    JOIN VillesAtteignables v1 ON v1.ville = v.AeroportARR
     WHERE a.villeA = 'Paris'
 )
-SELECT villeA
-FROM   correspondances;
-    
-
-    
+SELECT DISTINCT ville
+FROM VillesAtteignables;
