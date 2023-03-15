@@ -7,6 +7,8 @@ INSERT INTO AEROPORT values ('Orly','France','Paris');
 INSERT INTO AEROPORT values ('Francisci sa carneiro','Portugal','Porto');
 INSERT INTO AEROPORT values ('Charles de Gaulle','France','Paris');
 INSERT INTO AEROPORT values ('Antonio Carlos Jobim','Bresil','Rio');
+INSERT INTO AEROPORT values ('Pierre-Elliott-Trudeau','Canada','Montréal');
+
 
 
 INSERT INTO TERMINAL values ('1E','Orly');
@@ -27,9 +29,15 @@ INSERT INTO TERMINAL values ('2','Antonio Carlos Jobim');
 INSERT INTO TERMINAL values ('3','Antonio Carlos Jobim');
 INSERT INTO TERMINAL values ('4','Antonio Carlos Jobim');
 INSERT INTO TERMINAL values ('5','Antonio Carlos Jobim');
+INSERT INTO TERMINAL values ('1M','Pierre-Elliott-Trudeau');
+INSERT INTO TERMINAL values ('2M','Pierre-Elliott-Trudeau');
+INSERT INTO TERMINAL values ('3M','Pierre-Elliott-Trudeau');
+INSERT INTO TERMINAL values ('4M','Pierre-Elliott-Trudeau');
+INSERT INTO TERMINAL values ('5M','Pierre-Elliott-Trudeau');
 
 
 INSERT INTO VOL values (0442,TO_DATE('2023-07-10 23:30:00', 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2023-07-11 05:30:00', 'YYYY-MM-DD HH24:MI:SS'),1,'Charles de Gaulle','Antonio Carlos Jobim','2C','1');
 INSERT INTO VOL values (0443,TO_DATE('2023-07-11 10:30:00', 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2023-07-12 01:30:00', 'YYYY-MM-DD HH24:MI:SS'),1,'Antonio Carlos Jobim','Francisci sa carneiro','1','1F');
+INSERT INTO VOL values (0444,TO_DATE('2023-07-12 05:30:00', 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2023-07-12 20:30:00', 'YYYY-MM-DD HH24:MI:SS'),1,'Francisci sa carneiro','Pierre-Elliott-Trudeau','1F','1M');
 
 
