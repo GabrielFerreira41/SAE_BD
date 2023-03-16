@@ -55,8 +55,7 @@ INSERT INTO VOL values (0443,TO_DATE('2023-07-11 10:30:00', 'YYYY-MM-DD HH24:MI:
 INSERT INTO VOL values (0444,TO_DATE('2023-07-12 05:30:00', 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2023-07-12 20:30:00', 'YYYY-MM-DD HH24:MI:SS'),1,'Francisci sa carneiro','Pierre-Elliott-Trudeau','1F','1M');
 INSERT INTO VOL values (0445,TO_DATE('2023-07-12 05:30:00', 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2023-07-12 07:30:00', 'YYYY-MM-DD HH24:MI:SS'),1,'Adolfo-Suárez de Madrid-Barajas','Londres Heathrow','1ES','1A');
 INSERT INTO VOL values (0446,TO_DATE('2023-07-12 08:30:00', 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2023-07-12 10:30:00', 'YYYY-MM-DD HH24:MI:SS'),1,'Londres Heathrow','Adolfo-Suárez de Madrid-Barajas','1A','1ES');
-INSERT INTO VOL values (0446,TO_DATE('2023-07-12 08:30:00', 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2023-07-12 10:30:00', 'YYYY-MM-DD HH24:MI:SS'),1,'Londres Heathrow','Adolfo-Suárez de Madrid-Barajas','1A','1ES');
-INSERT INTO VOL values (0444,TO_DATE('2023-07-12 00:30:00', 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2023-07-12 20:30:00', 'YYYY-MM-DD HH24:MI:SS'),1,'Francisci sa carneiro','Londres Heathrow','1F','1A');
+INSERT INTO VOL values (0447,TO_DATE('2023-07-12 00:30:00', 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2023-07-12 20:30:00', 'YYYY-MM-DD HH24:MI:SS'),1,'Francisci sa carneiro','Londres Heathrow','1F','1A');
 
-
+COMMIT;
 
