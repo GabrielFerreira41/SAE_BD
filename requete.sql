@@ -17,7 +17,7 @@
             JOIN AEROPORT b ON v.AeroportARR = b.nomA
             JOIN VOL v2 ON v2.AeroportDEP = b.nomA
             JOIN AEROPORT d ON v2.AeroportARR = d.nomA
-            WHERE a.villeA = 'Paris';
+            WHERE a.villeA = 'Paris' and v.dateheureARR < v2.dateheureDEP;
 
 
 --     (c) En consid ́erant les horaires des vols, veuillez fournir la liste des villes accessibles
@@ -30,7 +30,7 @@
             JOIN AEROPORT d ON v2.AeroportARR = d.nomA
             JOIN VOL v3 ON v3.AeroportDEP = d.nomA
             JOIN AEROPORT e ON v3.AeroportARR = e.nomA
-            WHERE a.villeA = 'Paris';
+            WHERE a.villeA = 'Paris' and v.dateheureARR < v2.dateheureDEP and v2.dateheureARR<v3.dateheureDEP ;
 
 
 
