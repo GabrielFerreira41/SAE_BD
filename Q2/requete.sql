@@ -5,6 +5,13 @@ FROM VOL, TABLE(Equipage) e
 GROUP BY numVol, fonctionE;
 
 
+-- Pour chaque pilote, indiquer combien des vols lui sont associ ́es.
+
+select nomE,count(*) as nombre_vol
+From VOL, TABLE(Equipage) e
+Where fonctionE='conducteur'
+group BY nomE;
+
 -- L’impact d’un indice de qualit e est donn ́e par le produit de sa valeur et du poids
 -- que lui est attribué. Pour chaque vol, indiquer l’impact de chaque indice de qualité
 SELECT numVol, nomQualite, indiceQualite * nb_votes AS impact
