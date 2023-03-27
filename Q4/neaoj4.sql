@@ -89,31 +89,67 @@ CREATE (a7)-[:TERMINAL]->(t5a)
 
 create (v1:VOL {name:'0442', numVol:'0442',dateheureDEP:'2023-07-10 23:30:00',dateheureARR:'2023-07-11 05:30:00'})
 CREATE (c1)-[:VOL]->(v1)
-CREATE (a3)-[:DEPART]->(v1)
-CREATE (v1)-[:ARRIVE]->(a4)
+CREATE (a3)-[:ITINERAIRE]->(v1)
+CREATE (v1)-[:ITINERAIRE]->(a4)
+
 
 create (v2:VOL {name:'0443', numVol:'0443',dateheureDEP:'2023-07-11 10:30:00',dateheureARR:'2023-07-12 01:30:00'})
 CREATE (c1)-[:VOL]->(v2)
-CREATE (a4)-[:DEPART]->(v2)
-CREATE (v2)-[:ARRIVE]->(a2)
+CREATE (a4)-[:ITINERAIRE]->(v2)
+CREATE (v2)-[:ITINERAIRE]->(a2)
 
 
 create (v3:VOL {name:'0444', numVol:'0444',dateheureDEP:'2023-07-12 05:30:00',dateheureARR:'2023-07-12 20:30:00'})
 CREATE (c1)-[:VOL]->(v3)
-CREATE (a2)-[:DEPART]->(v3)
-CREATE (v3)-[:ARRIVE]->(a5)
+CREATE (a2)-[:ITINERAIRE]->(v3)
+CREATE (v3)-[:ITINERAIRE]->(a5)
+
 
 create (v4:VOL {name:'0445', numVol:'0445',dateheureDEP:'2023-07-12 05:30:00',dateheureARR:'2023-07-12 07:30:00'})
 CREATE (c1)-[:VOL]->(v4)
-CREATE (a6)-[:DEPART]->(v4)
-CREATE (v4)-[:ARRIVE]->(a7)
+CREATE (a6)-[:ITINERAIRE]->(v4)
+CREATE (v4)-[:ITINERAIRE]->(a7)
 
 
 create (v5:VOL {name:'0446', numVol:'0446',dateheureDEP:'2023-07-12 08:30:00',dateheureARR:'2023-07-12 10:30:00'})
 CREATE (c1)-[:VOL]->(v5)
-CREATE (a7)-[:DEPART]->(v5)
-CREATE (v5)-[:ARRIVE]->(a6)
+CREATE (a7)-[:ITINERAIRE]->(v5)
+CREATE (v5)-[:ITINERAIRE]->(a6)
+
+create (v6:VOL {name:'0447', numVol:'0447',dateheureDEP:'2023-07-11 04:30:00',dateheureARR:'2023-07-11 8:30:00'})
+CREATE (c1)-[:VOL]->(v5)
+CREATE (a4)-[:ITINERAIRE]->(v5)
+CREATE (v5)-[:ITINERAIRE]->(a6)
 
 
+--insert 1 
+--Charles de Gaulle: depart aeroport 
+--Antonio Carlos Jobim: arrivée aeroport  
+--dateheureDEP:'2023-07-10 23:30:00',dateheureARR:'2023-07-11 05:30:00'
+
+--insert 2 
+--Antonio Carlos Jobim:depart aeroport 
+--Francisci sa carneiro: arrivée aeroport
+--dateheureDEP:'2023-07-11 10:30:00',dateheureARR:'2023-07-12 01:30:00'
+
+--insert 3 
+--Francisci sa carneiro: depart aeroport
+--Pierre-Elliott-Trudeau: arrivée aeroport
+--dateheureDEP:'2023-07-12 05:30:00',dateheureARR:'2023-07-12 20:30:00'
+
+--insert 4 
+--Adolfo-Suárez de Madrid-Barajas: depart aeroport
+--Londres Heathrow:  arrivée aeroport
+--dateheureDEP:'2023-07-12 05:30:00',dateheureARR:'2023-07-12 07:30:00'
+
+--insert 5
+--Londres Heathrow: depart aeroport
+--Adolfo-Suárez de Madrid-Barajas:  arrivée aeroport
+--dateheureDEP:'2023-07-12 08:30:00',dateheureARR:'2023-07-12 10:30:00'
+
+--insert 6
+--Antonio Carlos Jobim: depart aeroport
+--Adolfo-Suárez de Madrid-Barajas:  arrivée aeroport
+--dateheureDEP:'2023-07-12 09:30:00',dateheureARR:'2023-07-12 11:30:00'
 
 
