@@ -38,15 +38,16 @@
 -- horaires de vol, avec des vols directs ou un nombre quelconque de correspondances
 
 
-WITH VillesAtteignables(aeroportDep, aeroportARR) AS (
-    SELECT v.AeroportDEP, v.AeroportARR
+WITH VillesAtteignables(aeroportDep, aeroportARR, dateheureARRe) AS (
+    SELECT v.AeroportDEP, v.AeroportARR, v.dateheureARR
     FROM VOL v, AEROPORT b 
     where v.AeroportDEP = b.nomA
     and b.villeA = 'Paris'
     UNION ALL
-    SELECT v2.AeroportDEP, v2.AeroportARR
+    SELECT v2.AeroportDEP, v2.AeroportARR, v2.dateheureARR
     FROM VOL v2, VillesAtteignables v3
-    WHERE v2.AeroportDEP = v3.aeroportARR and v2.dateheureDEP > v.dateheureARR
+
+    WHERE v2.AeroportDEP = v3.aeroportARR and v2.dateheureDEP > dateheureARRe
 )
 SELECT a.villeA 
 FROM AEROPORT a, VillesAtteignables v
