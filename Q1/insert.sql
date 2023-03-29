@@ -52,7 +52,8 @@ INSERT INTO TERMINAL values ('5A','Londres Heathrow');
 
 INSERT INTO VOL values (0442,TO_DATE('2023-07-10 23:30:00', 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2023-07-11 05:30:00', 'YYYY-MM-DD HH24:MI:SS'),1,'Charles de Gaulle','Antonio Carlos Jobim','2C','1');
 INSERT INTO VOL values (0443,TO_DATE('2023-07-11 10:30:00', 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2023-07-12 01:30:00', 'YYYY-MM-DD HH24:MI:SS'),1,'Antonio Carlos Jobim','Francisci sa carneiro','1','1F');
-INSERT INTO VOL values (0444,TO_DATE('2023-07-12 05:30:00', 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2023-07-12 20:30:00', 'YYYY-MM-DD HH24:MI:SS'),1,'Francisci sa carneiro','Pierre-Elliott-Trudeau','1F','1M');
+INSERT INTO VOL values (0444,TO_DATE('2023-07-12 5:30:00', 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2023-07-12 20:30:00', 'YYYY-MM-DD HH24:MI:SS'),1,'Francisci sa carneiro','Pierre-Elliott-Trudeau','1F','1M');
+INSERT INTO VOL values (0444,TO_DATE('2023-07-11 0:30:00', 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2023-07-12 20:30:00', 'YYYY-MM-DD HH24:MI:SS'),1,'Antonio Carlos Jobim','Londres Heathrow','1F','1M');
 INSERT INTO VOL values (0445,TO_DATE('2023-07-12 05:30:00', 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2023-07-12 07:30:00', 'YYYY-MM-DD HH24:MI:SS'),1,'Adolfo-Suárez de Madrid-Barajas','Londres Heathrow','1ES','1A');
 INSERT INTO VOL values (0446,TO_DATE('2023-07-12 08:30:00', 'YYYY-MM-DD HH24:MI:SS'),TO_DATE('2023-07-12 10:30:00', 'YYYY-MM-DD HH24:MI:SS'),1,'Londres Heathrow','Adolfo-Suárez de Madrid-Barajas','1A','1ES');
 
