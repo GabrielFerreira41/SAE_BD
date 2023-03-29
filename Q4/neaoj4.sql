@@ -99,7 +99,7 @@ CREATE (a4)-[:ITINERAIRE]->(v2)
 CREATE (v2)-[:ITINERAIRE]->(a2)
 
 
-create (v3:VOL {name:'0444', numVol:'0444',dateheureDEP:'2023-07-12 05:30:00',dateheureARR:'2023-07-12 20:30:00'})
+create (v3:VOL {name:'0444', numVol:'0444',dateheureDEP:'2023-07-12 2:30:00',dateheureARR:'2023-07-12 20:30:00'})
 CREATE (c1)-[:VOL]->(v3)
 CREATE (a2)-[:ITINERAIRE]->(v3)
 CREATE (v3)-[:ITINERAIRE]->(a5)
@@ -117,9 +117,9 @@ CREATE (a7)-[:ITINERAIRE]->(v5)
 CREATE (v5)-[:ITINERAIRE]->(a6)
 
 create (v6:VOL {name:'0447', numVol:'0447',dateheureDEP:'2023-07-11 04:30:00',dateheureARR:'2023-07-11 8:30:00'})
-CREATE (c1)-[:VOL]->(v5)
-CREATE (a4)-[:ITINERAIRE]->(v5)
-CREATE (v5)-[:ITINERAIRE]->(a6)
+CREATE (c1)-[:VOL]->(v6)
+CREATE (a4)-[:ITINERAIRE]->(v6)
+CREATE (v6)-[:ITINERAIRE]->(a1)
 
 
 --insert 1 
@@ -135,7 +135,7 @@ CREATE (v5)-[:ITINERAIRE]->(a6)
 --insert 3 
 --Francisci sa carneiro: depart aeroport
 --Pierre-Elliott-Trudeau: arrivée aeroport
---dateheureDEP:'2023-07-12 05:30:00',dateheureARR:'2023-07-12 20:30:00'
+--dateheureDEP:'2023-07-12 01:00:00',dateheureARR:'2023-07-12 20:30:00'
 
 --insert 4 
 --Adolfo-Suárez de Madrid-Barajas: depart aeroport
@@ -149,7 +149,7 @@ CREATE (v5)-[:ITINERAIRE]->(a6)
 
 --insert 6
 --Antonio Carlos Jobim: depart aeroport
---Adolfo-Suárez de Madrid-Barajas:  arrivée aeroport
+--Orly:  arrivée aeroport
 --dateheureDEP:'2023-07-12 09:30:00',dateheureARR:'2023-07-12 11:30:00'
 
 
