@@ -46,7 +46,7 @@ WITH VillesAtteignables(aeroportDep, aeroportARR) AS (
     UNION ALL
     SELECT v2.AeroportDEP, v2.AeroportARR
     FROM VOL v2, VillesAtteignables v3
-    WHERE v2.AeroportDEP = v3.aeroportARR
+    WHERE v2.AeroportDEP = v3.aeroportARR and v2.dateheureDEP > v.dateheureARR
 )
 SELECT a.villeA 
 FROM AEROPORT a, VillesAtteignables v
