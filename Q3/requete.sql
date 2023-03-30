@@ -1,1 +1,2 @@
-compagnie(X,Y,Z)?
+-- 2
+ville_possible(D,A)?

@@ -5,50 +5,55 @@ compagnie(4, airangletere, londre).
 compagnie(5, airespagne, madrid).
 
 aeroport(orly, france, paris).
-aeroport(franciscisacarneiro, portugal, porto).
-aeroport(charlesdegaule, france, paris).
-aeroport(antoniocarlosjobim, bresil, rio).
-aeroport(piereeliottrudeau, canada, montréal).
-aeroport(adolfoSuárezdemadridbarajas, espagne, madrid).
-aeroport(londresheathrow,angletere, londres).
+aeroport(francisci-sa-carneiro, portugal, porto).
+aeroport(charles-de-gaule, france, paris).
+aeroport(antonio-carlos-jobim, bresil, rio).
+aeroport(pierre-eliot-trudeau, canada, montréal).
+aeroport(adolfo-Suárez-de-madrid-barajas, espagne, madrid).
+aeroport(londres-heathrow,angletere, londres).
 
 terminal(1e, orly).
 terminal(2e, orly).
 terminal(3e, orly).
 terminal(4e, orly).
 terminal(5e, orly).
-terminal(1f, franciscisacarneiro).
-terminal(2f, franciscisacarneiro).
-terminal(3f, franciscisacarneiro).
-terminal(1c, charlesdegaule).
-terminal(2c, charlesdegaule).
-terminal(3c, charlesdegaule).
-terminal(4c, charlesdegaule).
-terminal(5c, charlesdegaule).
-terminal(1, antoniocarlosjobim).
-terminal(2, antoniocarlosjobim).
-terminal(3, antoniocarlosjobim).
-terminal(4, antoniocarlosjobim).
-terminal(5, antoniocarlosjobim).
-terminal(1m, piereeliottrudeau).
-terminal(2m, piereeliottrudeau).
-terminal(3m, piereeliottrudeau).
-terminal(4m, piereeliottrudeau).
-terminal(5m, piereeliottrudeau).
-terminal(1eS, adolfoSuárezdemadridbarajas).
-terminal(2eS, adolfoSuárezdemadridbarajas).
-terminal(3eS, adolfoSuárezdemadridbarajas).
-terminal(4eS, adolfoSuárezdemadridbarajas).
-terminal(5eS, adolfoSuárezdemadridbarajas).
-terminal(1a, londresheathrow).
-terminal(2a, londresheathrow).
-terminal(3a, londresheathrow).
-terminal(4a, londresheathrow).
-terminal(5a, londresheathrow).
+terminal(1f, francisci-sa-carneiro).
+terminal(2f, francisci-sa-carneiro).
+terminal(3f, francisci-sa-carneiro).
+terminal(1c, charles-de-gaule).
+terminal(2c, charles-de-gaule).
+terminal(3c, charles-de-gaule).
+terminal(4c, charles-de-gaule).
+terminal(5c, charles-de-gaule).
+terminal(1, antonio-carlos-jobim).
+terminal(2, antonio-carlos-jobim).
+terminal(3, antonio-carlos-jobim).
+terminal(4, antonio-carlos-jobim).
+terminal(5, antonio-carlos-jobim).
+terminal(1m, pierre-eliot-trudeau).
+terminal(2m, pierre-eliot-trudeau).
+terminal(3m, pierre-eliot-trudeau).
+terminal(4m, pierre-eliot-trudeau).
+terminal(5m, pierre-eliot-trudeau).
+terminal(1eS, adolfo-Suárez-de-madrid-barajas).
+terminal(2eS, adolfo-Suárez-de-madrid-barajas).
+terminal(3eS, adolfo-Suárez-de-madrid-barajas).
+terminal(4eS, adolfo-Suárez-de-madrid-barajas).
+terminal(5eS, adolfo-Suárez-de-madrid-barajas).
+terminal(1a, londres-heathrow).
+terminal(2a, londres-heathrow).
+terminal(3a, londres-heathrow).
+terminal(4a, londres-heathrow).
+terminal(5a, londres-heathrow).
 
-vol(0442, 23, 05, 1,charlesdegaule,antoniocarlosjobim,2c,1).
-vol(0443,10,01,1,antoniocarlosjobim,franciscisacarneiro,1,1f).
-vol(0444,05,20,1,franciscisacarneiro,piere-eliot-trudeau,1f,1m).
-vol(0445,05,07,1,adolfo-Suárezdemadrid-barajas,londresheathrow,1eS,1a).
-vol(0446,08,10,1,londresheathrow,adolfo-Suárezdemadrid-barajas,1a,1eS).
 
+vol(0442, 23, 05, 1,charles-de-gaule,antonio-carlos-jobim,2c,1).
+vol(0443,10,01,1,antonio-carlos-jobim,francisci-sa-carneiro,1,1f).
+vol(0444,05,20,1,francisci-sa-carneiro,pierre-eliot-trudeau,1f,1m).
+vol(0445,05,07,1,adolfo-Suárez-de-madrid-barajas,londres-heathrow,1eS,1a).
+vol(0446,08,10,1,londres-heathrow,adolfo-Suárez-de-madrid-barajas,1a,1eS).
+
+vol_possible(X, Y,A) :- vol(_, _, _, A, X, Y, _, _).
+vol_possible(X, Y,A) :- vol(_, _,D, _, X, Z, _, _), vol_possible(Z, Y,A), Y != X.
+
+ville_possible(D,A) :- vol_possible(X,Y,_),aeroport(X,_,D),aeroport(Y,_,A).
