@@ -79,12 +79,6 @@ vol(0444,5,10,1,francisci-sa-carneiro,pierre-eliot-trudeau,1f,1m).
 vol(0445,05,07,1,adolfo-Suárez-de-madrid-barajas,londres-heathrow,1eS,1a).
 vol(0446,08,10,1,londres-heathrow,adolfo-Suárez-de-madrid-barajas,1a,1eS).
 
-vol_possible(X, Y,A) :- vol(_, _, _, A, X, Y, _, _).
-vol_possible(X, Y,A) :- vol(_, _,D, _, X, Z, _, _), vol_possible(Z, Y,A), Y != X.
-
-ville_possible(D,A) :- vol_possible(X,Y,_),aeroport(X,_,D),aeroport(Y,_,A).
-
-
 connected(X, Y, DepartureTime, ArrivalTime) :-
     vol(_, DepartureTime,ArrivalTime , _, X, Y, _, _),
     aeroport(X,_,D),
@@ -96,5 +90,6 @@ connected(X, Y, DepartureTime1, ArrivalTime2) :-
     connected(Z, Y, DepartureTime2, ArrivalTime2),
     inf(ArrivalTime1, DepartureTime2),
     X!=Y.
+
 
     

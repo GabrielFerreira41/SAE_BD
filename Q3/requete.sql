@@ -1,2 +1,2 @@
 -- 2
-ville_possible(D,A)?
+connected(D,A)?
